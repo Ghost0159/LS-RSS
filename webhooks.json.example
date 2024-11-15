@@ -1,0 +1,12 @@
+{
+    "webhooks": [
+        {
+            "url": "https://webhook1.discord.com",
+            "thread_id": "1234567890"
+        },
+        {
+            "url": "https://webhook2.discord.com",
+            "thread_id": null
+        }
+    ]
+}

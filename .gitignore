@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+env/
+venv/
+
+# Sent news directory
+sent_news/
+
+# Config files
+webhooks.json
