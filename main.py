@@ -125,7 +125,7 @@ def send_news_to_discord(entry, webhook_url, thread_id):
     embed.set_timestamp()
 
     webhook.add_embed(embed)
-    webhook.content = "🆕 A new hack news is available on Logic-Sunrise:"
+    webhook.content = "🆕 Une nouvelle News Hack est dispo sur Logic-Sunrise:"
     response = webhook.execute()
 
     if response.status_code != 200:
