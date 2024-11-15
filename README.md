@@ -56,9 +56,9 @@ Un simple script Python pour surveiller le flux RSS du site logic-sunrise.com et
 
 ## Exemple de déploiement
 
-Bon, ce qui serez quand même intéressant c'est de le déployer afin qu'il soit tout le temps actif, n'est-ce pas? 🙂
+Bon, ce qui serait quand même intéressant, c'est de le déployer afin qu'il soit tout le temps actif, n'est-ce pas? 🙂
 
-Pour faire cela il y as donc mille est une façon de le faire, mais personnelement je fait un déploiement en tant que service sur un VPS ubuntu, si cela vous intéresse j'ai fait un guide [ici](./README_deployement.md).
+Pour faire cela, il y a donc mille et une façons de le faire, mais personnellement je fais un déploiement en tant que service sur un VPS Ubuntu, si cela vous intéresse j'ai fait un guide [ici](./README_deployement.md).
 
 ## Structure des fichiers
 
