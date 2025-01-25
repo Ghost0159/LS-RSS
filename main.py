@@ -5,6 +5,7 @@ import time
 import hashlib
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from bs4 import BeautifulSoup
+from dateutil import parser
 
 # Configuration
 SENT_NEWS_DIR = "sent_news"
@@ -59,7 +60,7 @@ def save_sent_news_for_webhook(webhook_id, sent_hashes):
 
 
 def parse_rss_feed(feed_url, sent_hashes):
-    """Parse the RSS feed and return new entries not yet sent."""
+    """Parse the RSS feed and return new entries not yet sent, ordered by oldest first."""
     feed = feedparser.parse(feed_url)
     new_entries = []
     for entry in feed.entries:
@@ -73,8 +74,11 @@ def parse_rss_feed(feed_url, sent_hashes):
                 "link": entry.link,
                 "description": description,
                 "image_url": image_url,
-                "pubDate": entry.published
+                "pubDate": entry.published,
+                "pubDate_parsed": parser.parse(entry.published)  # Parse the date for sorting
             })
+    # Sort by publication date (oldest first)
+    new_entries.sort(key=lambda x: x["pubDate_parsed"])
     return new_entries
 
 
