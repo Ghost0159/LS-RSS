@@ -1,3 +1,4 @@
 feedparser
 discord-webhook
 beautifulsoup4
+python-dateutil
